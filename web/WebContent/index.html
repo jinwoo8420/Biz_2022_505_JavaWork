@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> web </title>
+		<style>
+			table { 
+				width : 500px; 
+				border-collapse : collapse;
+				border : 1px solid #85b4ff;
+			}
+			
+			thead { background-color : #fa87a2; }
+			
+			th, td { 
+				border : 1px solid #87faa0;
+				padding : 8px;
+				font-size : 18px;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 	여러줄 주석 처리 : ctrl + shift + /
+			한 줄 주석 처리 : ctrl + shift + c 
+			자동완성 : ctrl + space
+			코드라인 삭제 : ctrl + d
+			ip 주소 확인 : ipconfig
+			로컬ip : localhost, 127.0.0.1 -->
+		<h3>1.블록 레벨 텍스트 태그 : 혼자서 한 줄을 차지하여 너비가 100% 꽉 차게 표시 </h3><br><br>		
+			1) h (heading) : 제목을 표시하는 태그 h1~6
+				<h1>가장 큰 제목 태그</h1>
+				<h6>가장 작은 제목 태그</h6> <br><br>
+		<p> 2) p (paragraph) : 단락 표시로 줄바꿈 없이 한 줄로 표시 <br> 
+							   텍스트의 길이가 브라우저 창의 너비보다 길면 자동으로 줄 바뀜 </p> <br><br>
+			3) br : 줄바꿈 태그 <br><br><br>
+			
+			<hr><br>
+			
+		<p>	4) hr (horizontal) : 주제가 바뀌거나 분위기 전환을 위한 가로선 표시 </p> <br><br>						
+		<div> 5) div (division) : 영역을 나누는 블록 태그 </div> <br><br>
+		
+			<hr><br>
+			
+		<h3>2.인라인 레벨 텍스트 태그 : 한 줄을 차지하지 않는 태그로 화면에 표시되는 컨텐츠 만큼의 너비를 차지하는 태그 </h3><br><br>
+			<strong> 1) strong 태그 : 텍스트를 굵게 표시 </strong> <br><br>
+			2) span 태그 : 특별한 뜻은 없지만 텍스트의 일부만 스타일 적용하고자 할 때 사용 <br>
+			텍스트 일부만 <span style = 'color : red'> 스타일 적용 </span> <br><br>		
+			
+			<hr><br>
+			
+		<h3>3. 목록을 만드는 태그</h3> <br><br>
+			1) ul (unordered list) : 순서없는 목록 태그 <br>
+									 기본 disc : list - style - type <br>
+			<ul> 
+				<li> 메뉴1 </li>
+				<li> 메뉴2 </li> 
+				<li> 메뉴3 </li> 
+				<li> 메뉴4 </li> 
+				<li> 메뉴5 </li> 
+			</ul> <br><br>
+			2) ol (ordered list) : 순서가 있는 목록 태그 (숫자, 알파벳, 로마숫자로 표시) <br>
+								   시작값 지정 가능 : start <br>
+								   설정 변경 : type <br>
+								   기본 decimal : list - style - type <br>	
+			<ol start = '3' type = 'A'>
+				<li> 메뉴1 </li>
+				<li> 메뉴2 </li> 
+				<li> 메뉴3 </li> 
+				<li> 메뉴4 </li> 
+				<li> 메뉴5 </li>					
+			</ol> <br><br>
+			
+			<hr><br>
+			
+		<h3>4. 표를 만드는 테그</h3> <br><br>
+			1) table, tr(table row), td(table data) : 행열로 이루어진 표의 형태를 사용하는 태그 <br>
+			tr : 행에 해당하는 태그 <br>
+			td : 행 내부의 열에 해당하는 셀 테그 <br>
+			th (table head) : 행 내부의 제목 <br>
+			<table >
+				<tr><th> 성명 </th><th> 전화번호 </th></tr>
+				<tr><td> 홍길동 </td><td> 010-1234-5678 </td></tr>
+				<tr><td> 심청 </td><td> 062-9876-5432 </td></tr>				
+			</table> <br><br>
+			2) caption : 표에 사용하는 제목 표시 <br>
+						 표 상단 가운데 위치
+			<table >
+				<tr><th> 성명 </th>
+					<td> 홍길동 </td>
+				</tr>
+				<tr><th> 전화번호 </th>
+					<td> 010-1234-5678 </td>					
+				</tr>
+				<tr><th> 성별 </th>
+					<td> 남 </td>					
+				</tr>
+				<caption> 개별정보 </caption>
+			</table> <br> <hr> <br>
+			
+			<table>
+				<tr>
+					<th> 성명 </th>
+					<td> 홍길동 </td>
+					<th> 성별 </th>
+					<td> 남 </td>
+				</tr>
+				<tr>
+					<th> 전화번호 </th>
+					<td colspan = '3'> 010-1234-5678 </td>
+				</tr>
+			</table> <br><br>
+			
+			<table>
+				<tr>
+					<td rowspan = '3'> 사진 </td>
+					<th> 성명 </th>
+					<td> 홍길동 </td>
+				</tr>
+				<tr>
+					<th> 성별 </th>
+					<td> 남 </td>
+				</tr>
+				<tr>
+					<th> 전화번호 </th>
+					<td> 010-1234-5678 </td>
+				</tr>
+			</table> <br><br>
+			
+			<table>
+				<tr>
+					<th rowspan = '2'> 개인회원 </th>
+					<th> 일반회원 </th>
+					<td> 훈련 </td>
+				</tr>
+				<tr>
+					<th> 대리인 </th>
+					<td> 기업 대리인 권한 부여 </td>
+				</tr>
+				<tr>
+					<th> 훈련기관 </th>
+					<td colspan = '2'> 서비스 권한 </td>
+				</tr>
+				<tr>
+					<th> 기업회원 </th>
+					<td colspan = '2'> 행정서비스 </td>
+				</tr>
+			</table> <br> <hr> <br><br>
+			
+			3) 제목(thead), 본문(tbody), 요약(tfoot) <br>
+			   colgroup, col 로 열의 크기나 배경색 지정 <br>
+			<table>
+				<colgroup>
+					<col style = 'width : 150px'>
+					<col style = 'width : 100px; background-color : yellow'>
+					<col style = 'width : 200px'>
+				<thead>
+					<tr>
+						<th> 성명 </th>
+						<th> 성별 </th>
+						<th> 전화번호 </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> 홍길동 </td>
+						<td> 남 </td>
+						<td> 062-4567-8951 </td>
+					</tr>
+					<tr>
+						<td> 심청 </td>
+						<td> 여 </td>
+						<td> 02-8521-3214 </td>
+					</tr>
+					<tr>
+						<td> 박문수 </td>
+						<td> 남 </td>
+						<td> 032-8526-7412 </td>
+					</tr>					
+				</tbody>
+				<tfoot>
+					<tr>
+						<th> 총인원수 </th>
+						<td colspan = '2'> 2명 </td>
+					</tr>
+				</tfoot>
+			</table> <br> <hr> <br>
+			
+		<h4> 테이블 태그에 대한 style 지정 </h4> 
+		<ul>
+			<li> 인라인 스타일 : 태그에 직접 지정 </li>
+			<li> 내부 스타일 : html 문서 내부에 style 태그 안에 지정 </li>
+			<li> 외부 스타일 : style만 지정하는 css 파일을 따로 만들어 html 문서에 연결 </li>
+		</ul> <br>
+		
+	</body>
+</html>
