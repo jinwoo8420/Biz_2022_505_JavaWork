@@ -27,11 +27,11 @@ public class Method_02 {
 	}
 	
 	public static long longNum() {
-		return 100;
+		return 100_000_000_000_000_000L;
 	}
 	
 	public static float floatNum() {
-		return 100;
+		return 100.5f;
 	}
 	
 	public static boolean bYes() {
