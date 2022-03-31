@@ -40,11 +40,12 @@ public class Method_02 {
 	}
 	
 	public static boolean bYes() {
-		int num1 = 33, num2 = 55;
+		int num1 = (int)(Math.random() * 100) + 1;
+		int num2 = (int)(Math.random() * 100) + 1;
 		
-		boolean bEq = (num1 == num2);
+		boolean bGT = (num1 > num2);
 		
-		if (bEq) {
+		if (bGT) {
 			return true;
 		} else {
 			return false;
