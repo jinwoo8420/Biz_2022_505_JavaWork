@@ -19,11 +19,16 @@ public class Method_02 {
 	}
 	
 	public static int num() {
-		return 100;
+		int num1 = 100, num2 = 200;
+		
+		return num1 + num2;
 	}
 	
 	public static double doNum() {
-		return 100.0;
+		double num1 = (Math.random() * 100) + 1;
+		double num2 = (Math.random() * 100) + 1;
+		
+		return num1 + num2;
 	}
 	
 	public static long longNum() {
@@ -35,7 +40,15 @@ public class Method_02 {
 	}
 	
 	public static boolean bYes() {
-		return true;
+		int num1 = 33, num2 = 55;
+		
+		boolean bEq = (num1 == num2);
+		
+		if (bEq) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	public static String nation() {
