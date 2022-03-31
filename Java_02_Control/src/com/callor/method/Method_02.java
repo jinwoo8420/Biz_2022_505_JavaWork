@@ -15,7 +15,7 @@ public class Method_02 {
 		System.out.println(longNum1);
 		System.out.println(fNum1);
 		System.out.println(bYes);
-		System.out.println(str);
+		System.out.println(str);		
 	}
 	
 	public static int num() {
@@ -32,11 +32,14 @@ public class Method_02 {
 	}
 	
 	public static long longNum() {
-		return 100_000_000_000_000_000L;
+		long num1 = 100000000000000000L, num2 = 100000000000000000L;
+		return num1 + num2;
 	}
 	
 	public static float floatNum() {
-		return 100.5f;
+		float num1 = 100.5f, num2 = 99.6f;
+		
+		return num1 + num2;
 	}
 	
 	public static boolean bYes() {
@@ -54,6 +57,6 @@ public class Method_02 {
 	
 	public static String nation() {
 		return "hello world";
-	}
+	}	
 
 }
