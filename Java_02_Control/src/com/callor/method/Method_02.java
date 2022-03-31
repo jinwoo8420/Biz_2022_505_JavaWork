@@ -9,6 +9,13 @@ public class Method_02 {
 		float fNum1 = floatNum();
 		boolean bYes = bYes();		
 		String str = nation();
+		
+		System.out.println(intNum1);
+		System.out.println(doNum1);
+		System.out.println(longNum1);
+		System.out.println(fNum1);
+		System.out.println(bYes);
+		System.out.println(str);
 	}
 	
 	public static int num() {
