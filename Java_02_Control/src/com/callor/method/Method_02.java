@@ -3,11 +3,16 @@ package com.callor.method;
 public class Method_02 {
 
 	public static void main(String[] args) {
+		/*
+		 * num()를 실행 -> num() 호출하여 실행
+		 * num()가 return 하는 데이터를 intNum 변수에 저장
+		 */
+		
 		int intNum1 = num();
 		double doNum1 = doNum();
 		long longNum1 = longNum();
 		float fNum1 = floatNum();
-		boolean bYes = bYes();		
+		boolean bYes = bYes();
 		String str = nation();
 		
 		System.out.println(intNum1);
@@ -15,7 +20,7 @@ public class Method_02 {
 		System.out.println(longNum1);
 		System.out.println(fNum1);
 		System.out.println(bYes);
-		System.out.println(str);		
+		System.out.println(str);
 	}
 	
 	public static int num() {
