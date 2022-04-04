@@ -18,7 +18,7 @@ public class Operator_04 {
 		 * 각 bit를 OR 연산
 		 */
 		
-		intNum2 = intNum1 ^ 2;		
+		intNum2 = intNum1 ^ 2;
 		intNum2 = intNum1  |2;
 		
 		/*
