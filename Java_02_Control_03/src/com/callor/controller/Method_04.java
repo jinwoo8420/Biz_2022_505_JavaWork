@@ -40,9 +40,7 @@ public class Method_04 {
 		
 		ServiceV2 sV4; // ServiceV2 class type의 객체(object)를 선언했다
 		
-		sV4 = new ServiceV2(); // 초기화(new ServiceV2())를 실행하여 sV4가 인스턴스가 되었다
-		
-		
+		sV4 = new ServiceV2(); // 초기화(new ServiceV2())를 실행하여 sV4가 인스턴스가 되었다		
 	}
 
 }
