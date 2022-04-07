@@ -6,7 +6,7 @@ public class ServiceV2 {
 	 * ServiceV2 클래스에는 guguDan()가 두 번 선언되어 있다
 	 * 보통 같은 이름의 method를 두 번 이상 선언하면 오류가 발생한다
 	 * method의 매개변수(argument)가 있고 없음에 따라 이름은 같지만 서로 다른
-	 * method로 판단하여 오류가 발생하지 않는다 
+	 * method로 판단하여 오류가 발생하지 않는다
 	 */
 	
 	public void guguDan() {
