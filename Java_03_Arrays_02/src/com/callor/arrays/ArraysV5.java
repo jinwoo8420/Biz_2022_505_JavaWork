@@ -8,11 +8,11 @@ public class ArraysV5 {
 		for (int i = 0; i < intScore.length; i++) {
 			intScore[i] = (int)(Math.random() * 100) + 1;
 			
-			if ((i % 5) == 0) {
+			System.out.print(intScore[i] + ",\t");
+			
+			if ((i + 1) % 5 == 0) {
 				System.out.println();
 			}
-			
-			System.out.print(intScore[i] + ",\t");
 			
 		}
 	}
