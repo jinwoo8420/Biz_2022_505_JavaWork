@@ -28,7 +28,7 @@ public class ScoreServiceV5 {
 		System.out.println(Line.sLine);
 
 		for (int i = 0; i < intKor.length; i++) {
-			System.out.print((i + 1) + "번 : " + intKor[i] + "\t");
+			System.out.print((i + 1) + "번 : " + intKor[i] + " \t");
 
 			if ((i + 1) % 5 == 0) {
 				System.out.println();
