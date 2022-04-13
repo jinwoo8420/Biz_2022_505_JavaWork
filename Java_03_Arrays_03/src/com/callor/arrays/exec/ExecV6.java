@@ -1,5 +1,11 @@
 package com.callor.arrays.exec;
 
+/*
+ * 정수형 배열 100개를 선언 후 Math.random()을 사용하여 1 ~ 100까지 임의의 수를 생성하고
+ * 각 요소에 저장 후 배열의 각 요소에 저장 된 수 중에서
+ * 짝수 리스트를 한 라인에 5개씩 끊어서 출력
+ */
+
 public class ExecV6 {
 
 	public static void main(String[] args) {
@@ -18,14 +24,18 @@ public class ExecV6 {
 			if ((num[i] % 2) == 0) {
 				count++;
 				System.out.print(num[i] + ",\t");
+
+				if (count % 5 == 0) {
+					System.out.println();
+				}
 			}
 
-			if ((num[i] % 2) == 1) {
-
-			} else if (count % 5 == 0) {
-				System.out.println();
-			}
+//			if ((num[i] % 2) == 1) {
+//			} else if (count % 5 == 0) {
+//				System.out.println();
+//			}
 		}
 
 	}
 }
+
