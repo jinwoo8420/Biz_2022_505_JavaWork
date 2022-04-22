@@ -9,6 +9,12 @@ import com.callor.score.service.domain.StudentVO;
  */
 
 public interface StudentService {
+	/*
+	 * 추상 method
+	 * method의 접근제한자(public), method의 이름, 매개변수, return type만 정의 한 것
+	 * 연산(실행)되는 실제 코드가 없는 method 
+	 */
+	
 	public void loadStudent();
 
 	public StudentVO[] getStudents();
