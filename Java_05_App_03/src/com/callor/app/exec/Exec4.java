@@ -9,8 +9,12 @@ public class Exec4 {
 		int num = (int) (Math.random() * 100) + 1;
 
 		for (int i = 2; i <= num; i++) {
+			if (num == 1) {
+				System.out.println("num = 1");
+			}
+
 			if (num % i == 0) {
-				
+
 				if (num == i) {
 					System.out.println(num + " = 소수");
 					break;
@@ -18,7 +22,7 @@ public class Exec4 {
 					System.out.println(num + " = 소수X");
 					break;
 				}
-				
+
 			}
 		}
 
