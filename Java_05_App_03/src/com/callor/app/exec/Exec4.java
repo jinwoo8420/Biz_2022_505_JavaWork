@@ -9,10 +9,6 @@ public class Exec4 {
 		int num = (int) (Math.random() * 100) + 1;
 
 		for (int i = 2; i <= num; i++) {
-			if (num == 1) {
-				System.out.println("num = 1");
-				break;
-			}
 
 			if (num % i == 0) {
 
