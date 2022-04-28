@@ -1,6 +1,9 @@
-package com.callor.app.exec;
+package com.callor.app.primes;
 
 public class Exec7 {
+	/*
+	 * 정수형 배열 100개 생성 후 2 ~ 101까지 임의의 수 생성 후 배열에 저장 후 소수 개수 출력
+	 */
 
 	public static void main(String[] args) {
 		int[] num = new int[100];
