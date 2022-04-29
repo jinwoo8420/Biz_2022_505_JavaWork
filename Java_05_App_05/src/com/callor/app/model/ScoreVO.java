@@ -58,7 +58,7 @@ public class ScoreVO {
 
 	@Override
 	public String toString() {
-		return stNum + " " + kor + " " + eng + " " + math + " " + sum + " " + avr;
+		return (stNum + 1) + "\t" + kor + "\t" + eng + "\t" + math + "\t" + sum + "\t" + avr;
 	}
 
 }

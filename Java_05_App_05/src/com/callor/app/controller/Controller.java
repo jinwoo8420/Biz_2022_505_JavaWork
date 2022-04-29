@@ -6,8 +6,9 @@ public class Controller {
 
 	public static void main(String[] args) {
 		ScoreService score = new ScoreService();
-		
-		score.scorePrint();
+
+		score.makeScore(20);
+		score.scorePrint(20);
 	}
 
 }
