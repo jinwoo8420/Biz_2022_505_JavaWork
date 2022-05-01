@@ -3,11 +3,11 @@ package com.callor.app.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.callor.app.model.ScoreVO;
+import com.callor.app.model.ScoreVO2;
 import com.callor.app.utils.Line;
 
-public class ScoreService {
-	List<ScoreVO> stList = new ArrayList<>();
+public class ScoreService2 {
+	List<ScoreVO2> stList = new ArrayList<>();
 
 	public void makeScore(int length) {
 		int kor = 0, eng = 0, math = 0, sum = 0;
@@ -20,7 +20,7 @@ public class ScoreService {
 			sum = kor + eng + math;
 			avr = sum / 3.0f;
 
-			stList.add(new ScoreVO(i, kor, eng, math, sum, avr));
+			stList.add(new ScoreVO2(i, kor, eng, math, sum, avr));
 		}
 	}
 
@@ -32,8 +32,8 @@ public class ScoreService {
 		System.out.println(Line.sLine(50));
 
 		for (int i = 0; i < length; i++) {
-			System.out.print(stList.get(i));
-			System.out.printf("%.2f\n", stList.get(i).getAvr());
+			System.out.println(stList.get(i));
+
 			kor_sum += stList.get(i).getKor();
 			eng_sum += stList.get(i).getEng();
 			math_sum += stList.get(i).getMath();

@@ -1,6 +1,6 @@
 package com.callor.app.model;
 
-public class ScoreVO {
+public class ScoreVO2 {
 	private int stNum;
 	private int kor;
 	private int eng;
@@ -8,7 +8,7 @@ public class ScoreVO {
 	private int sum;
 	private float avr;
 
-	public ScoreVO(int stNum, int kor, int eng, int math, int sum, float avr) {
+	public ScoreVO2(int stNum, int kor, int eng, int math, int sum, float avr) {
 		this.stNum = stNum;
 		this.kor = kor;
 		this.eng = eng;
@@ -67,7 +67,7 @@ public class ScoreVO {
 
 	@Override
 	public String toString() {
-		return (stNum + 1) + "\t" + kor + "\t" + eng + "\t" + math + "\t" + sum + "\t";
+		return (stNum + 1) + "\t" + kor + "\t" + eng + "\t" + math + "\t" + sum + "\t" + avr;
 	}
 
 }
