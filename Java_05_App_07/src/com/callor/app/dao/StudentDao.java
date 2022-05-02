@@ -39,7 +39,7 @@ public class StudentDao {
 //			StudentVO stVO = StudentVO.builder().stNum(sql).stName(sql).stAddr(sql).build();
 			
 			/*
-			 * 모든 필드가 매개변수로 제공되는 임의 생성자 VO 생성
+			 * 모든 필드가 매개변수로 제공되는 임의 생성자 호출 후 VO 생성
 			 */
 			
 //			StudentVO stVO = new StudentVO (
