@@ -80,14 +80,39 @@ public class TodoServiceImplV1 implements TodoService {
 	/*
 	 * TODO 완료하기
 	 * 
-	 * 매개변수로 전달받은 num 값은 List 요소의 실제 값보다 1 만큼 크다
-	 * num 값이 4라면 실제로는 3번 요소를 선택한 것이다
+	 * 매개변수로 전달받은 num 값은 List 요소의 실제 값보다 1 만큼 크다 num 값이 4라면 실제로는 3번 요소를 선택한 것이다
 	 * 
 	 * 선택한 요소의 edate, etime 부분을 현재 시스템의 날짜와 시간을 사용하여 문자열로 바꾼 다음 setting
 	 */
-	
+
 	@Override
 	public void compTodo(Integer num) {
+		Date curDate = new Date(System.currentTimeMillis());
+
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+
+		String today = dateFormat.format(curDate);
+		String time = timeFormat.format(curDate);
+
+		int size = todoList.size();
+
+		for (int i = num; i < size + 1;) {
+			todoList.get(i - 1).setEdate(today);
+			todoList.get(i - 1).setEtime(time);
+
+			System.out.printf("%d\t", i);
+			System.out.print(todoList.get(i - 1).getEdate() + "\t");
+			System.out.print(todoList.get(i - 1).getEtime() + "\t");
+			System.out.print(todoList.get(i - 1).getTContent() + "\t");
+
+			String comp = todoList.get(i - 1).getEdate() == null || todoList.get(i - 1).getEdate().isEmpty() ? "진행 중"
+					: "완료됨";
+
+			System.out.println(comp);
+			break;
+		}
+
 	}
 
 }
