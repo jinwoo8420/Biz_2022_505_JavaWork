@@ -21,19 +21,19 @@ public class TodoServiceImplV1 implements TodoService {
 	 * 
 	 * java에서 날짜(시간)를 취급하는 방법이 여러가지 있다
 	 * 
-	 * 1.7 이전에는 Date, Calender 클래스를 사용하여 날짜와 시간을 취급했다
-	 * 1.8 이후에는 LocalDate, LocalTime, LocalDateTime 클래스를 사용한다
+	 * 1.7 이전에는 Date, Calender 클래스를 사용하여 날짜와 시간을 취급했다 1.8 이후에는 LocalDate, LocalTime,
+	 * LocalDateTime 클래스를 사용한다
 	 */
-	
+
 	// java 1.8에서는 Date 클래스의 생성자에 System.currentTimeMillis() method를 주입해야 한다
 	@Override
 	public void todoInsert(String content) { // 컴퓨터의 현재 날짜 시각 읽어오기
 		Date curDate = new Date(System.currentTimeMillis());
-		
+
 		// Date 객체의 값을 날짜, 시각 문자열 타입으로 변경하기 위한 객체 생성
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
-		
+
 		/*
 		 * 현재 날짜, 시각에 해당하는 문자열 생성하기
 		 * 
@@ -41,22 +41,21 @@ public class TodoServiceImplV1 implements TodoService {
 		 */
 		String today = dateFormat.format(curDate);
 		String time = timeFormat.format(curDate);
-		
+
 		/*
 		 * 데이터 관련하여 사용되는 KEY, ID 값
 		 * 
-		 * 데이터의 무결성을 보장하기 위하여 모든 데이터 (레코드 단위, row 단위)는
-		 * 데이터를 유일하게 식별(구별) 할 수 있는 데이터를 가지고 있어야 한다
-		 * 각 언어, DBMS 등에서는 고유의 방법으로 ID를 만들고 관리한다
+		 * 데이터의 무결성을 보장하기 위하여 모든 데이터 (레코드 단위, row 단위)는 데이터를 유일하게 식별(구별) 할 수 있는 데이터를 가지고
+		 * 있어야 한다 각 언어, DBMS 등에서는 고유의 방법으로 ID를 만들고 관리한다
 		 * 
 		 * Java에서는 java.util.UUID 클래스를 사용하여 범우주적으로 유일한 ID 값을 생성하는 도구 제공
 		 */
-		
+
 		UUID uuid = UUID.randomUUID();
 		String idStr = uuid.toString();
-		
+
 		TodoVO tVO = TodoVO.builder().tKey(idStr).sdate(today).stime(time).tContent(content).build();
-		
+
 		todoList.add(tVO);
 	}
 
@@ -76,6 +75,19 @@ public class TodoServiceImplV1 implements TodoService {
 
 	@Override
 	public void saveTodo(String fileName) {
+	}
+
+	/*
+	 * TODO 완료하기
+	 * 
+	 * 매개변수로 전달받은 num 값은 List 요소의 실제 값보다 1 만큼 크다
+	 * num 값이 4라면 실제로는 3번 요소를 선택한 것이다
+	 * 
+	 * 선택한 요소의 edate, etime 부분을 현재 시스템의 날짜와 시간을 사용하여 문자열로 바꾼 다음 setting
+	 */
+	
+	@Override
+	public void compTodo(Integer num) {
 	}
 
 }

@@ -6,7 +6,7 @@ import com.callor.todo.service.InputService;
 import com.callor.utils.Line;
 
 public class InputServiceImplV1 implements InputService {
-	private final Scanner sc;
+	protected final Scanner sc;
 
 	public InputServiceImplV1() {
 		sc = new Scanner(System.in);
@@ -45,6 +45,11 @@ public class InputServiceImplV1 implements InputService {
 		String content = sc.nextLine();
 
 		return content;
+	}
+
+	@Override
+	public Integer selectTodo() {
+		return null;
 	}
 
 }
