@@ -1,5 +1,6 @@
 package com.callor.todo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.callor.todo.model.TodoVO;
@@ -11,7 +12,7 @@ import com.callor.utils.Line;
 
 public class TodoControllerV12 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		TodoService toService = new TodoServiceImplV1();
 		InputService inService = new InputServiceImplV2();
 
@@ -38,12 +39,13 @@ public class TodoControllerV12 {
 
 				printTodo(todoList);
 			} else if (mainMenu == 4) {
-				List<TodoVO> todoList = toService.todoSelectAll();
-				printTodo(todoList);
-
-				System.out.println(Line.dLine(50));
 
 				while (true) {
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+
+					System.out.println(Line.dLine(50));
+
 					System.out.println("할 일 선택");
 					Integer num = inService.selectTodo();
 
@@ -60,6 +62,8 @@ public class TodoControllerV12 {
 				} // end while
 
 			} else if (mainMenu == 5) {
+				toService.saveTodo(null);
+			} else if (mainMenu == 6) {
 				System.out.println("종료");
 				break;
 			} // end if
@@ -73,7 +77,7 @@ public class TodoControllerV12 {
 		System.out.print("시작 시간\t");
 		System.out.print("할 일\t");
 		System.out.println("상태");
-		System.out.println(Line.sLine(50));		
+		System.out.println(Line.sLine(50));
 
 		int size = toVO.size();
 
