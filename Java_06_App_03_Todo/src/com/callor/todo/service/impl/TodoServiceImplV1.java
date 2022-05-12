@@ -88,6 +88,26 @@ public class TodoServiceImplV1 implements TodoService {
 	
 	@Override
 	public void compTodo(Integer num) {
+		Date curDate = new Date(System.currentTimeMillis());
+
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+
+		String today = dateFormat.format(curDate);
+		String time = timeFormat.format(curDate);
+		
+		todoList.get(num-1).setEdate(today);
+		todoList.get(num-1).setEtime(time);
+		
+		System.out.printf("%d\t", num);
+		System.out.print(todoList.get(num - 1).getEdate() + "\t");
+		System.out.print(todoList.get(num - 1).getEtime() + "\t");
+		System.out.print(todoList.get(num - 1).getTContent() + "\t");
+
+		String comp = todoList.get(num - 1).getEdate() == null || todoList.get(num - 1).getEdate().isEmpty() ? "진행 중"
+				: "완료됨";
+
+		System.out.println(comp);
 	}
 
 }
