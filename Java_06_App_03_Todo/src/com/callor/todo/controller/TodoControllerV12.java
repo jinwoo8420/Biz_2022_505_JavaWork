@@ -73,7 +73,7 @@ public class TodoControllerV12 {
 		System.out.print("시작 시간\t");
 		System.out.print("할 일\t");
 		System.out.println("상태");
-		System.out.println(Line.sLine(50));
+		System.out.println(Line.sLine(50));		
 
 		int size = toVO.size();
 
