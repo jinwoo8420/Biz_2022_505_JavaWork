@@ -7,13 +7,13 @@ import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.InputService;
 import com.callor.todo.service.TodoService;
 import com.callor.todo.service.impl.InputServiceImplV2;
-import com.callor.todo.service.impl.TodoServiceImplV1;
+import com.callor.todo.service.impl.TodoServiceImplV2;
 import com.callor.utils.Line;
 
 public class TodoControllerV12 {
 
 	public static void main(String[] args) throws IOException {
-		TodoService toService = new TodoServiceImplV1();
+		TodoService toService = new TodoServiceImplV2();
 		InputService inService = new InputServiceImplV2();
 
 		while (true) {
@@ -38,6 +38,42 @@ public class TodoControllerV12 {
 				List<TodoVO> todoList = toService.todoSelectAll();
 
 				printTodo(todoList);
+			} else if (mainMenu == 3) {
+				while (true) {
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(60));
+
+					System.out.println("내용 변경할 할 일 선택");
+					Integer num = inService.selectTodo();
+
+					// 할 일 입력 받고 입력받은 내용을 선택한 Todo의 반영
+					if (num == null) {
+						System.out.println("숫자만 선택");
+						continue;
+					}
+
+					if (num == -1) {
+						break;
+					}
+
+					String content = inService.inputContent();
+
+					if (content.equals("QUIT")) {
+						break;
+					}
+
+					toService.update(num, content);
+
+//					String content = inService.inputContent();
+//					
+//					if (content.equals("QUIT")) {
+//						break;
+//					}
+//
+//					todoList.get(num - 1).setTContent(content);
+//					todoList.get(num - 1).setEdate(null);
+				}
 			} else if (mainMenu == 4) {
 
 				while (true) {

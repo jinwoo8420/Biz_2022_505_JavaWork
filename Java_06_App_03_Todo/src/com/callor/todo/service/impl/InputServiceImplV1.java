@@ -20,7 +20,7 @@ public class InputServiceImplV1 implements InputService {
 
 		System.out.println("1. TODO 추가");
 		System.out.println("2. TODO List 보기");
-		System.out.println("3. Key로 검색");
+		System.out.println("3. TODO 변경");
 		System.out.println("4. 완료 처리");
 		System.out.println("5. 파일에 저장");
 		System.out.println("6. 종료");

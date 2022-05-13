@@ -19,7 +19,7 @@ public class TodoServiceImplV2 extends TodoServiceImplV1 {
 	 * 저장된 todolist.txt 파일을 읽어서 todoList에 추가하기
 	 */
 
-	private void loadTodoList() {
+	protected void loadTodoList() {
 		InputStream is = null;
 
 		try {
@@ -42,9 +42,13 @@ public class TodoServiceImplV2 extends TodoServiceImplV1 {
 			String etime = todoInfo[4];
 			String tContent = todoInfo[5];
 
-			if (edate.equals("null")) {
+			if (edate.equalsIgnoreCase("null")) {
 				edate = null;
 			}
+
+//			if (todoInfo.length < tContent) {
+//				continue;
+//			}
 
 			TodoVO tVO = TodoVO.builder().tKey(tKey).sdate(sdate).stime(stime).edate(edate).etime(etime)
 					.tContent(tContent).build();
@@ -59,5 +63,29 @@ public class TodoServiceImplV2 extends TodoServiceImplV1 {
 			e.printStackTrace();
 		}
 		fileRead.close();
+	} // end loadTodo
+
+	@Override
+	public void update(Integer num, String content) {
+		int index = num - 1;
+
+		TodoVO tVO;
+
+		try {
+			tVO = todoList.get(index);
+		} catch (Exception e) {
+			System.out.println("리스트에 없음");
+			return;
+		}
+
+		// 할 일 변경
+		tVO.setTContent(content);
+
+		// update 후 내용을 파일에 자동으로 저장
+		try {
+			this.saveTodo(null);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-}
+} // end class
