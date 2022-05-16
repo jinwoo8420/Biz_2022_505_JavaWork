@@ -10,8 +10,8 @@ public class Exec3 {
 			num[i] = (int) (Math.random() * 100) + 1;
 		}
 
-		for (int i = 0; i < num.length; i++) {
-			System.out.print(num[i] + "\t");
+		for(int nm : num) {
+			System.out.print(nm + "\t");
 		}
 
 		for (int i = 0; i < num.length; i++) {
