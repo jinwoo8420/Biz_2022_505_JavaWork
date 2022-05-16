@@ -9,13 +9,13 @@ public class Exec8 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		InputStream is = new FileInputStream("src/com/callor/app/exec/data.txt");
-		
+
 		Scanner sc = new Scanner(is);
 		
-		while(sc.hasNextLine()) {
+		while (sc.hasNextLine()) {
 			System.out.println(sc.nextLine());
 		}
-		
+
 	}
 
 }
