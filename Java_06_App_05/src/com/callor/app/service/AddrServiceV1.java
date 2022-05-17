@@ -24,9 +24,7 @@ public class AddrServiceV1 {
 					temp = aVO.get(j);
 					aVO.set(j, aVO.get(i));
 					aVO.set(i, temp);
-				} else {
-					break;
-				}
+				} 
 			}
 		}
 
