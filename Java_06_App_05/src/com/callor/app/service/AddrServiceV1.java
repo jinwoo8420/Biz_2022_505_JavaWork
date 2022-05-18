@@ -23,7 +23,11 @@ public class AddrServiceV1 {
 					AddressVO temp = aVO.get(j);
 					aVO.set(j, aVO.get(i));
 					aVO.set(i, temp);
+<<<<<<< HEAD
 				}
+=======
+				} 
+>>>>>>> 45034f019552631b6012832c6de9dd40a3037de8
 			}
 		}
 
