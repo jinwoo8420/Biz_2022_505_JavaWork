@@ -16,16 +16,13 @@ public class AddrServiceV1 {
 	}
 
 	public void printAddrList(List<AddressVO> aVO) {
-		AddressVO temp;
 
 		for (int i = 0; i < aVO.size(); i++) {
 			for (int j = i + 1; j < aVO.size(); j++) {
 				if (aVO.get(i).getAge() > aVO.get(j).getAge()) {
-					temp = aVO.get(j);
+					AddressVO temp = aVO.get(j);
 					aVO.set(j, aVO.get(i));
 					aVO.set(i, temp);
-				} else {
-					break;
 				}
 			}
 		}
